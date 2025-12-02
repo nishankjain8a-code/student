@@ -1,5 +1,3 @@
-import os
-return pd.read_csv(os.path.join(os.path.dirname(__file__), "cleaned_data.csv"))
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -21,7 +19,9 @@ st.set_page_config(page_title="Student Success Hub", page_icon="🎓", layout="w
 # ===============================================================
 @st.cache_data
 def load_data():
-    return pd.read_csv("D:\JAVA\DASHBOARD\cleaned_data.csv")
+    import os
+    return pd.read_csv(os.path.join(os.path.dirname(__file__), "cleaned_data.csv"))
+
 
 df = load_data()
 
@@ -331,5 +331,6 @@ with tab_ai:
 
     for r in recs:
         st.write("- " + r)
+
 
 
