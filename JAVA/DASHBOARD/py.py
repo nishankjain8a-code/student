@@ -1,3 +1,5 @@
+import os
+return pd.read_csv(os.path.join(os.path.dirname(__file__), "cleaned_data.csv"))
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -329,4 +331,5 @@ with tab_ai:
 
     for r in recs:
         st.write("- " + r)
+
 
