@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as s
 import pandas as pd
 import numpy as np
 from fpdf import FPDF
@@ -17,7 +17,7 @@ st.set_page_config(page_title="Student Success Hub", page_icon="🎓", layout="w
 import pathlib
 DATA = pathlib.Path(__file__).parent / "cleaned_data.csv"
 df = pd.read_csv(DATA)
-df = load_data()
+
 
 # ===============================================================
 # AUTO-DETECT SUBJECT COLUMNS
@@ -325,6 +325,7 @@ with tab_ai:
 
     for r in recs:
         st.write("- " + r)
+
 
 
 
