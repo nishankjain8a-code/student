@@ -17,12 +17,9 @@ st.set_page_config(page_title="Student Success Hub", page_icon="🎓", layout="w
 # ===============================================================
 # LOAD DATA
 # ===============================================================
-@st.cache_data
-def load_data():
-    import os
-    return pd.read_csv(os.path.join(os.path.dirname(__file__), "cleaned_data.csv"))
-
-
+import pathlib
+DATA = pathlib.Path(__file__).parent / "cleaned_data.csv"
+df = pd.read_csv(DATA)
 df = load_data()
 
 # ===============================================================
