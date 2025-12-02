@@ -1,10 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-try:
-    from fpdf import FPDF
-except ModuleNotFoundError:
-    FPDF = None
+from fpdf import FPDF
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -328,6 +325,7 @@ with tab_ai:
 
     for r in recs:
         st.write("- " + r)
+
 
 
 
